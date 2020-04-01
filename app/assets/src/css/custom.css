@@ -140,20 +140,27 @@ button.linkedin-button:hover {
 	opacity: 1;
 }
 
-.box-menu .shadow-flash:hover {
+.box-menu > div {
 	transition: 0.3s !important;
+}
+
+.box-menu > div:hover {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
-	/* margin-top: 15px !important; */
+	margin-top: -10px !important;
 }
 
-.box-part {
-	background: #fff;
-	padding: 30px 5px 20px 5px;
-	margin: 20px 0;
+.br-10 {
 	border-radius: 10px;
-	box-shadow: 0 0 20px 0.5px #d9d9d9;
 }
 
-.title {
-	margin-top: 30px;
+.block-title {
+	font-size: 15pt;
+}
+
+.block-subtitle {
+	font-size: 10pt;
+}
+
+.block-icon {
+	color: #128fc5;
 }
