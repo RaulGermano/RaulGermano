@@ -1,3 +1,16 @@
+@font-face {
+	font-family: 'Pacifico';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pacifico Regular'), local('Pacifico-Regular'),
+		url(https://fonts.gstatic.com/s/pacifico/v16/FwZY7-Qmy14u9lezJ-6H6Mk.woff2)
+			format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+
 .container {
 	max-width: 960px;
 }
@@ -84,6 +97,7 @@
 
 .beginin {
 	padding: 15rem 0rem 15rem 0rem !important;
+	height: 100vh;
 }
 
 .title {
@@ -163,4 +177,132 @@ button.linkedin-button:hover {
 
 .block-icon {
 	color: #128fc5;
+}
+
+div.menus {
+	display: block;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+div.menu-item {
+	display: flex;
+	height: 100%;
+}
+
+.sticky-top {
+	position: absolute;
+	width: 100%;
+}
+
+#contact-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.fs-20 {
+	font-size: 20px;
+}
+
+button.button-primary {
+	background-image: linear-gradient(-90deg, #13599b, #128fc5);
+	color: #fff;
+	opacity: 0.9;
+	transition: 0.3s;
+}
+
+button.button-primary:hover {
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+	background-image: linear-gradient(-90deg, #13599b, #128fc5);
+	color: #fff;
+	opacity: 1;
+}
+
+bg-icon-facebook,
+.bg-icon-linkedin,
+.bg-icon-email,
+.bg-icon-whatsapp,
+.bg-icon-instagram {
+	opacity: 0.8;
+	transition-duration: 0.3s;
+}
+
+.bg-icon-youtube {
+	cursor: auto;
+	opacity: 0.3;
+	transition-duration: 0.3s;
+}
+
+.bg-icon-facebook {
+	background-color: #4267b2;
+}
+
+.bg-icon-linkedin {
+	background-color: #0077b5;
+}
+
+.bg-icon-email {
+	background-color: #42aeb2;
+}
+
+.bg-icon-whatsapp {
+	background-color: #00c711;
+}
+
+.bg-icon-instagram {
+	background: radial-gradient(
+		circle at 33% 100%,
+		#fed373 4%,
+		#f15245 30%,
+		#d92e7f 62%,
+		#9b36b7 85%,
+		#515ecf
+	);
+}
+
+.bg-icon-youtube {
+	background-color: red;
+}
+
+.bg-icon-facebook:hover,
+.bg-icon-linkedin:hover,
+.bg-icon-whatsapp:hover,
+.bg-icon-email:hover,
+.bg-icon-instagram:hover {
+	opacity: 1;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+	transition-duration: 0.3s;
+}
+
+.link-social {
+	margin: 0 7.5px;
+	width: 50px !important;
+	height: 50px !important;
+	color: white !important;
+	display: inline-block !important;
+	border-radius: 50% !important;
+}
+
+.ts-icons {
+	text-shadow: 0 0 20px #393939b3;
+}
+
+.social-icon {
+	width: inherit !important;
+	display: inline-block !important;
+	text-align: center !important;
+	color: #fff !important;
+	font-size: 1.5rem;
+	line-height: 50px !important;
+}
+
+.logo-icon-format {
+	padding-right: 0.3rem !important;
+	padding-left: 0.3rem !important;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	font-size: 15px;
+	-webkit-appearance: textarea;
 }

@@ -7,8 +7,181 @@
 		<link rel="stylesheet" href="../assets/src/css/credit-card.css" />
 	</head>
 	<body>
+		<header>
+			<div class="container">
+				<img src="../assets/images/logo-pt__large_plus.png" />
+			</div>
+		</header>
+		<div class="container p-0">
+			<p class="menu-title">Dados pessoais</p>
+		</div>
+
 		<div class="checkout container">
-			<div class="credit-card-box ">
+			<form class="form col-10" autocomplete="off" novalidate>
+				<div class="row form-row mb-20">
+					<div class="col-6">
+						<label for="client-name">Nome e sobrenome</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-name"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+
+					<div class="col-6">
+						<label for="client-email">E-mail</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-email"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row form-row mb-20">
+					<div class="col-4">
+						<label for="client-phone">Telefone</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-phone"
+						/>
+						<span class="just-number-message"></span>
+					</div>
+
+					<div class="col-4">
+						<label for="client-cpf">CPF</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-cpf"
+						/>
+						<span class="just-number-message"></span>
+					</div>
+				</div>
+
+				<div class="row form-row">
+					<div class="col-4">
+						<label for="client-pass">Senha</label>
+						<input
+							type="number"
+							class="form-control"
+							id="client-pass"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+
+					<div class="col-4">
+						<label for="client-confirm-pass">Confirmar senha</label>
+						<input
+							type="number"
+							class="form-control"
+							id="client-confirm-pass"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<br />
+		<br />
+		<br />
+
+		<div class="container p-0">
+			<p class="menu-title">Endereço</p>
+		</div>
+
+		<div class="checkout container">
+			<form class="form col-10" autocomplete="off" novalidate>
+				<div class="row form-row mb-20">
+					<div class="col-2">
+						<label for="client-address-zip-code">CEP</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-address-zip-code"
+							placeholder="Obrigatório"
+							required
+						/>
+						<span class="just-number-message"></span>
+					</div>
+
+					<div class="col-5">
+						<label for="client-address-state">Estado</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-address-state"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+
+					<div class="col-5">
+						<label for="client-address-city">Cidade</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-address-city"
+							placeholder="Obrigatório"
+						/>
+					</div>
+				</div>
+
+				<div class="row form-row">
+					<div class="col-5">
+						<label for="client-address-neighborhood">Bairro</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-address-neighborhood"
+							placeholder="Obrigatório"
+						/>
+					</div>
+
+					<div class="col-5">
+						<label for="client-address-street">Rua</label>
+						<input
+							type="text"
+							class="form-control"
+							id="client-address-street"
+							placeholder="Obrigatório"
+							required
+						/>
+					</div>
+
+					<div class="col-2">
+						<label for="client-address-number">Número</label>
+						<input
+							type="number"
+							class="form-control"
+							id="client-address-number"
+							placeholder="Obrigatório"
+							required
+						/>
+						<span class="just-number-message"></span>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<br />
+		<br />
+		<br />
+
+		<div class="container p-0">
+			<p class="menu-title">Pagamento</p>
+		</div>
+
+		<div class="checkout container payment">
+			<div class="credit-card-box">
 				<div class="flip">
 					<div class="front default-flag">
 						<div class="chip"></div>
@@ -16,6 +189,7 @@
 							<svg
 								version="1.1"
 								id="elo-flag"
+								class="d-none"
 								xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 								x="0px"
@@ -364,7 +538,8 @@
 
 							<svg
 								version="1.1"
-								id="Layer_1"
+								id="mastercard-flag"
+								class="d-none"
 								xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 								x="0px"
@@ -730,6 +905,7 @@
 							<svg
 								version="1.1"
 								id="visa-flag"
+								class="d-none"
 								xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 								x="0px"
@@ -759,34 +935,22 @@
 							</svg>
 						</div>
 						<div class="number">
-							<span class="credit-card-digit" id="1">*</span>
-							<span class="credit-card-digit" id="2">*</span>
-							<span class="credit-card-digit" id="3">*</span>
-							<span class="credit-card-digit" id="4">*</span>
-
-							<span
-								class="credit-card-digit"
-								style="margin-left: 20px;"
-								>*</span
-							>
+							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 
-							<span
-								class="credit-card-digit"
-								style="margin-left: 20px;"
-								>*</span
-							>
+							<span class="credit-card-digit ml-20">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 
-							<span
-								class="credit-card-digit"
-								style="margin-left: 20px;"
-								>*</span
-							>
+							<span class="credit-card-digit ml-20">*</span>
+							<span class="credit-card-digit">*</span>
+							<span class="credit-card-digit">*</span>
+							<span class="credit-card-digit">*</span>
+
+							<span class="credit-card-digit ml-20">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
 							<span class="credit-card-digit">*</span>
@@ -817,8 +981,6 @@
 			</div>
 
 			<form class="form col-6" autocomplete="off" novalidate>
-				<h4 class="mp-0">Pagamento</h4>
-
 				<div class="row form-row">
 					<div class="col-5 mb-20">
 						<label for="card-owner">Nome e sobrenome</label>
@@ -834,12 +996,14 @@
 					<div class="col-5">
 						<label for="card-number">Numeração do cartão</label>
 						<input
-							type="text"
+							type="number"
 							class="form-control"
 							id="card-number"
 							placeholder="Obrigatório"
 							required
 						/>
+						<span class="just-number-message"></span>
+						<small class="validation-credit-card-digits"></small>
 					</div>
 				</div>
 
@@ -847,8 +1011,9 @@
 					<div class="col-3">
 						<label for="card-expiration-month">Mês</label>
 						<select
+							id="card-expiration-month"
 							class="custom-select"
-							id="card-expiration-month required"
+							required
 						>
 							<option disabled selected>- Selecine -</option>
 						</select>
@@ -857,8 +1022,8 @@
 					<div class="col-3">
 						<label for="card-expiration-year">Ano</label>
 						<select
-							class="custom-select"
 							id="card-expiration-year"
+							class="custom-select"
 							required
 						>
 							<option disabled selected>- Selecine -</option>
@@ -866,77 +1031,57 @@
 					</div>
 
 					<div class="col-4">
-						<label for="card-ccv">CVV</label>
+						<label for="card-ccv">CCV</label>
 						<input
-							type="text"
+							type="number"
 							class="form-control"
 							id="card-ccv"
 							placeholder="Obrigatório"
 							required
 						/>
+						<span class="just-number-message"></span>
 					</div>
 				</div>
-
-				<div class="row form-row col-10 button-send">
-					<button class="btn btn-primary btn-md" type="submit">
-						Continuar
-					</button>
-				</div>
-
-				<label for="card-number">Número do cartão</label>
-				<input
-					type="number"
-					id="card-number"
-					class="input-cart-number"
-					maxlength="16"
-				/>
-
-				<label for="card-owner">Nome do títular</label>
-				<input type="text" id="card-owner" />
-
-				<label for="card-expiration-month">Data de expedição</label>
-				<div class="select">
-					<select id="card-expiration-month">
-						<option>- -</option>
-						<option>01</option>
-						<option>02</option>
-						<option>03</option>
-						<option>04</option>
-						<option>05</option>
-						<option>06</option>
-						<option>07</option>
-						<option>08</option>
-						<option>09</option>
-						<option>10</option>
-						<option>11</option>
-						<option>12</option>
-					</select>
-				</div>
-				<div class="select">
-					<select id="card-expiration-year">
-						<option>- -</option>
-						<option>2016</option>
-						<option>2017</option>
-						<option>2018</option>
-						<option>2019</option>
-						<option>2020</option>
-						<option>2021</option>
-						<option>2022</option>
-						<option>2023</option>
-						<option>2024</option>
-						<option>2025</option>
-					</select>
-				</div>
-
-				<label for="card-ccv">CCV</label>
-				<input type="number" id="card-ccv" maxlength="3" />
-
-				<button class="btn"><i class="fa fa-lock"></i> submit</button>
-				-->
 			</form>
 		</div>
 
+		<div class="container p-0">
+			<button
+				id="button-send"
+				class="btn btn-primary btn-md menu-button"
+				type="submit"
+			>
+				Continuar
+			</button>
+		</div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+
 		<script src="../assets/lib/jquery/jquery-3.4.1/js.js"></script>
+		<script src="../assets/lib/masks/jquery-masc-1.14.0.js"></script>
 		<script src="../assets/src/js/credit-card.js"></script>
+
+		<script>
+			$('#client-address-zip-code').on('click', () => {
+				navigator.geolocation.getCurrentPosition(pos => {
+					const lat = pos.coords.latitude;
+					const lon = pos.coords.longitude;
+					const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+
+					$.get(url, resp => {
+						const zip_code = resp.address.postcode;
+						const city = resp.address.town;
+						const state = resp.address.state;
+
+						$('#client-address-zip-code').val(zip_code);
+						$('#client-address-city').val(city);
+						$('#client-address-state').val(state);
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
