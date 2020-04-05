@@ -251,6 +251,10 @@ bg-icon-facebook,
 	background-color: #00c711;
 }
 
+.bg-icon-github {
+	background-color: #181818;
+}
+
 .bg-icon-instagram {
 	background: radial-gradient(
 		circle at 33% 100%,
@@ -269,8 +273,9 @@ bg-icon-facebook,
 .bg-icon-facebook:hover,
 .bg-icon-linkedin:hover,
 .bg-icon-whatsapp:hover,
-.bg-icon-email:hover,
-.bg-icon-instagram:hover {
+.bg-icon-instagram:hover,
+.bg-icon-github:hover,
+.bg-icon-email:hover {
 	opacity: 1;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
 	transition-duration: 0.3s;
